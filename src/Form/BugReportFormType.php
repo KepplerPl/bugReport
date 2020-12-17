@@ -37,11 +37,7 @@ class BugReportFormType extends AbstractType
                 'choice_filter'=> ChoiceList::filter(
                     $this,
                     function ($entityTwo) {
-                        if($entityTwo instanceof EntityOne) {
-                            return $entityTwo->getRand12() == 3;
-                        }
-
-                        return false;
+                        die('not gonna enter here');
                     }
                 )
             ])
@@ -51,8 +47,8 @@ class BugReportFormType extends AbstractType
                 'choice_label' => 'random_string',
                 'choice_filter'=> ChoiceList::filter(
                     $this,
-                    function () {
-                        return true;
+                    function ($entityThree) {
+                        die('not gonna enter here');
                     }
                 )
             ])
